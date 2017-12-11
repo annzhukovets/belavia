@@ -16,9 +16,9 @@ public class ProfilePage extends AbstractPage {
 
     @FindBy(xpath = "//*[@id=\"Document_number\"]")
     private WebElement passportIdInp;
-    @FindBy(xpath = "/html/body/div[4]/div/div[3]/form/div[2]/div[2]/div[1]/div/a/span")
+    @FindBy(css = "form .ui-corner-all span")
     private WebElement countryInp;
-    @FindBy(xpath = "/html/body/div[4]/div/div[3]/form/div[6]/div/div/button")
+    @FindBy(css = ".first-txt button")
     private WebElement submitChangesBtn;
     private String currentCountry;
     @FindBy(xpath = "//*[@id=\"Appellation\"]")

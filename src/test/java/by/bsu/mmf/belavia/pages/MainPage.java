@@ -8,21 +8,18 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by fgaponenko on 7.12.17.
- */
 public class MainPage extends AbstractPage {
 
     private static final Logger logger = LogManager.getRootLogger();
-    public final String BASE_URL = "https://by.bsu.belavia.by/";
+    public final String BASE_URL = "https://belavia.by/";
 
     @FindBy(css = ".logo > a:nth-child(1) > img:nth-child(1)")
     private WebElement logo;
     @FindBy(xpath = "//*[@id=\"select-main-menu\"]")
     private WebElement menu;
-    @FindBy(xpath = "/html/body/div[1]/div/div/div[2]/ul/li[1]/div/div/div/ul[3]/li/ul/li[1]/a")
+    @FindBy(css = "menu-content a")
     private WebElement menuItem;
-    @FindBy(xpath = "/html/body/div[1]/div/div/div[2]/ul/li[2]/a/span[2]")
+    @FindBy(css = "№select-member")
     private WebElement usernameElement;
     @FindBy(xpath = "//li[2]/a/span[2]")
     private WebElement loginDropdownShowBtn;
@@ -30,7 +27,7 @@ public class MainPage extends AbstractPage {
     private WebElement loginInp;
     @FindBy(xpath = "//*[@id=\"Password\"]")
     private WebElement passwordInp;
-    @FindBy(xpath = "/html/body/div[1]/div/div/div[2]/ul/li[2]/div/div/div/form/div[4]/div[1]/button")
+    @FindBy(css = ".form-horizontal .btn-b2-login")
     private WebElement submitLoginBtn;
 
     public MainPage(WebDriver driver) {
